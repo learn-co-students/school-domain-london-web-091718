@@ -24,16 +24,10 @@ attr_reader :school, :roster
   end
 
   def sort
-    # binding.pry
     @roster.map do |grade, name| #only looks at first key and sorts
       @roster[grade] = name.sort
-
     end
     @roster
   end
 
 end
-
-# binding.pry
-
-# p 'end'
