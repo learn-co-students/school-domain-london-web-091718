@@ -29,8 +29,8 @@ def sort
   @roster.each do |grade, students|
     grade_array = @roster.keys.sort
     grade_array.each do |grade2|
-      moo=@roster[grade2].sort
-      final_hash[grade2] = moo
+      sorted_students=@roster[grade].sort
+      final_hash[grade] = sorted_students
     end
   end
   return final_hash
