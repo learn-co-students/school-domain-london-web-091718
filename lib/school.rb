@@ -26,11 +26,11 @@ end
 
 def sort
   final_hash = Hash.new(0)
-  @roster.each do |grade, students|
-    grade_array = @roster.keys.sort
-    grade_array.each do |grade2|
-      sorted_students=@roster[grade].sort
-      final_hash[grade] = sorted_students
+  @roster.each do |grade, students| #splits roster elements
+    grade_array = @roster.keys.sort #creates array with sorted grades
+    grade_array.each do |grade|
+      sorted_students=@roster[grade].sort #creates array with sorted students
+      final_hash[grade] = sorted_students #pushes student arrays to their appropriate marks
     end
   end
   return final_hash
